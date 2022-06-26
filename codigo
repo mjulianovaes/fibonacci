@@ -1,0 +1,81 @@
+#Raul Bernardes e Maria Julia Novaes#
+
+#importando as bibliotecas
+import turtle
+import math
+
+def fiboPlot(n): 
+#o square a e b representam os quadrados
+#o primeiro quadrado a ser formado será igual a 1
+#assim o square b tomara esse valor
+#e o square a tomara o antigo valor de square b
+    a = 0
+    b = 1
+    sqr_a = a
+    sqr_b = b
+
+#definindo a cor do primeiro quadrado
+x.pencolor("green")
+
+#desenhando o primeiro quadrado
+x.forward(b * fac) #frente
+x.left(90) #esquerda
+x.forward(b * fac) 
+x.left(90)    
+x.forward(b * fac)
+x.left(90)
+x.forward(b * fac)
+
+#introduzindo na sequencia de fibonacci criando a função sequencia
+def sequencia():
+    p = sqr_b #p=square b antes de realizar a soma
+    sqr_b = square_b + sqr_a #p = square_b + square_a 
+    sqr_a = p #square_a = square_b + square_a 
+
+#criando função para desenhar os outros quadrados
+for i in range(1, n): #para i no intervalo de 1 a n execute:
+    x.backward(square_a * fac) #tras
+    x.right(90) #direita
+    x.forward(square_b * fac)
+    x.left(90)
+    x.forward(square_b * fac)
+    x.left(90)
+    x.forward(square_b * fac)
+
+#introduzindo na sequencia de fibonacci 
+sequencia()
+
+#colocando a caneta do ponto inicial do espiral
+x.penup()
+x.setposition(fac, 0) #posição de ajuste
+x.seth(0) #conjunto
+x.pendown() 
+
+#definindo cor da caneta do espiral
+x.pencolor("purple")
+
+#executando o espiral
+x.left(90)
+for i in range(n):
+    print(b) #imprima
+    forward = math.pi * b * fac / 2
+    forward / = 90
+    for j in range(90):
+        x.forward(fdwd)
+        x.left(1)
+         p = a
+         a = b
+         b = p + b
+
+fac = 1 #tamanho
+
+m = int (input('Digite o num de interações (deve ser > 1): ')) #define o tamanho do espiral
+
+if n > 0:
+    print("Sequencia de Fibonacci para", n, "elementos :")
+    x = turtle.Turtle()
+    x.speed(100)
+    fiboPlot(n)
+    turtle.done()
+else:
+    print("O numero de interações tem que ser > 0") #condição
